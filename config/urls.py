@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('subasta.users.urls', 'users'), namespace='users')),
     path('', include(('subasta.products.urls', 'products'), namespace='products')),
+    path('', include(('subasta.offers.urls', 'offers'), namespace='offers')),
 
 ]
