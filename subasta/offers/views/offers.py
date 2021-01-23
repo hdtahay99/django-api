@@ -44,7 +44,7 @@ def list_offer_product(request):
     
     if hasattr(request.user, 'is_client'):
         if request.user.is_admin == True:
-            products_offereds = Offer.objects.select_related('product').values('user','product', 'price_offer')
+            products_offereds = Offer.objects.select_related('product').values('id','user','product', 'price_offer')
             return Response(products_offereds)
         else:
             return Response({'error' : 'Please, comunicated with de administrator, the user is not permited'}, status=status.HTTP_403_FORBIDDEN)
@@ -59,7 +59,7 @@ def list_offers_product(request):
 
     if hasattr(request.user, 'is_client'):
         if request.user.is_client == True:
-            products_offereds = Offer.objects.filter(product=request.data.get('product')).select_related('product').values('user','product', 'price_offer')
+            products_offereds = Offer.objects.filter(product=request.data.get('product')).select_related('product').values('id','user','product', 'price_offer')
             return Response(products_offereds)
         else:
             return Response({'error' : 'Please, comunicated with de administrator, the user is not permited'}, status=status.HTTP_403_FORBIDDEN)    

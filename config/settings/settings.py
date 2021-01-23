@@ -50,7 +50,8 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     'subasta.users.apps.UsersAppConfig',
     'subasta.products.apps.ProductsAppConfig',
-    'subasta.offers.apps.OffersAppConfig'
+    'subasta.offers.apps.OffersAppConfig',
+    'subasta.sales.apps.SalesAppConfig'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

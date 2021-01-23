@@ -17,6 +17,7 @@ class OfferModelSerializer(serializers.ModelSerializer):
 
         model  = Offer
         fields = (
+            'id',
             'user',
             'product',
             'price_offer',

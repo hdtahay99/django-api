@@ -13,6 +13,7 @@ class OfferAdmin(admin.ModelAdmin):
     """Offer admin"""
 
     list_display = (
+        'id',
         'user',
         'product',
         'price_offer',
